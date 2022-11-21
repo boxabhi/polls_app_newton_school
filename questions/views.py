@@ -9,11 +9,12 @@ from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate , login
-
+from django.http import HttpResponse
 
 
 from django.contrib import messages
 def login_view(request):
+    return HttpResponse("<h1> Django Deployed</h1>")
    # messages.info(request, 'Account not found')
     if request.method == 'POST':
         email = request.POST.get('email')
